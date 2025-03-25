@@ -1,0 +1,40 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0d1117;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 20%;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+a {
+    color: #907db1;
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main div {
+    max-width: 75ch;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    outline: solid 1px #3d444d;
+}
+
+a:hover {
+    text-decoration: underline solid #907db1;
+}
