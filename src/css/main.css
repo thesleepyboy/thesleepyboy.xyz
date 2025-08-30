@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --dark-blue: rgb(0, 0, 170);
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: "VT323", monospace;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to bottom, blue, black);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin: 0;
+}
+
+header {
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 6rem;
+    text-shadow: .1rem .5rem rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    color: white;
+
+    width: 100%;
+    text-align: left;
+
+    padding-bottom: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+
+    width: 100%;
+    max-width: 120ch;
+
+    padding: 2px;
+    border: 4px solid var(--dark-blue);
+
+    outline: 2px solid black;
+}
+
+footer {
+    color: white;
+}
+
+p, li {
+    font-size: larger;
+}
+
+.title-bar {
+    color: white;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+
+    background-color: var(--dark-blue);
+
+    padding: .3rem 0;
+}
+
+.content {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px;
+    width: 100%;
+}
+
+.buttons a {
+    display: flex;
+    align-items: center;
+
+    border: 1.5px solid black;
+    border-radius: 2px;
+
+    color: black;
+    text-decoration: none;
+
+    background-color: #c3c7cb;
+
+    padding: 2px 10px;
+    gap: 5px;
+
+    box-shadow: 
+        inset 1px 1px white, 
+        inset -1px -1px #868a8e, 
+        1px 1px black;
+
+    font-size: larger;
+}
+
+a img {
+    width: 1em;
+    height: 1em;
+}
