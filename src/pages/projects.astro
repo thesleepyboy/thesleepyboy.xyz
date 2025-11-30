@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Window from "../components/Window.astro";
+import Footer from "../components/Footer.astro";
+import Project from "../components/Project.astro"
+import MinimizedWindow from "../components/MinimizedWindow.astro";
+---
+
+<Layout>
+    <Header>Projects</Header>
+    <Window title="projects">
+        <div slot="content">
+            <Project name="bcra.js" icon="/project_images/BCRA_logo.svg" linkToRepo="https://github.com/thesleepyboy/bcra.js">
+                <div slot="description">
+                    <p>
+                        bcra.js is a JavaScript / TypeScript (written in TypeScript) basic API wrapper for the Banco Central de
+                        la República Argentina (BCRA) API.
+                    </p>
+                    <p>
+                        as of now it only supports 2 endpoints (out of 9) as it's still in development.
+                    </p>
+                </div>
+            </Project>
+
+            <Project name="trucobot" icon="/project_images/CARTAS_espanolas.png">
+                <div slot="description">
+                    <p>
+                        trucobot is a Discord bot written in TypeScript that lets you play a famous argentinian card game called
+                        truco. 
+                    </p>
+                </div>
+            </Project>
+        </div>
+    </Window>
+    <Footer>
+        <div class="flex gap-2.5">
+			<MinimizedWindow
+				title="Home"
+				goToPage="/"
+			/>
+            <MinimizedWindow
+				title="GitHub (profile)"
+				goToPage="/github"
+			/>
+
+        </div>
+    </Footer>
+</Layout>
