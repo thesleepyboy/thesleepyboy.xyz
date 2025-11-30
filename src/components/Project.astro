@@ -1,0 +1,13 @@
+---
+const { name, icon, linkToRepo } = Astro.props;
+---
+
+<div class="p-4">
+    <h1 class="flex">
+        <a class="flex items-center gap-4 hover:underline" href={linkToRepo}>
+            <img class="w-20 h-20" src={icon} alt="project icon">
+            <span>{name}</span>
+        </a>
+    </h1>
+    <slot name="description"/>
+</div>

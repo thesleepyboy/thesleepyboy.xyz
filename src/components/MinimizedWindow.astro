@@ -1,0 +1,14 @@
+---
+import Button from "./Button.astro"
+const { title, goToPage } = Astro.props;
+---
+
+<div class="flex items-center py-[0.3rem] px-2 mb-2.5 text-white text-center font-bold bg-[rgb(0_0_170)] outline-1 outline-white" id="title-bar">
+    {title}
+    <div class="flex pl-5 gap-0.5">
+        <Button
+            href={goToPage}
+            icon="▴" 
+        />
+    </div>
+</div>

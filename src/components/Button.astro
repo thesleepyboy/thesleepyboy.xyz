@@ -1,0 +1,8 @@
+---
+const {href = "#", icon = "", text = ""} = Astro.props;
+---
+
+<a class="flex self-start items-center py-0.5 px-2.5 gap-[5px] text-black font-bold no-underline bg-[#c3c7cb] border-[1.5px] border-black rounded-xs shadow-win95" href={href}>
+    {icon.endsWith("svg") ? <img class="w-[1em] h-[1em]" src={icon}> : icon}
+    {text}
+</a>

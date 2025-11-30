@@ -1,11 +1,74 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Header from '../components/Header.astro';
+import MinimizedWindow from '../components/MinimizedWindow.astro';
+import Window from '../components/Window.astro';
+import Button from '../components/Button.astro';
+import Footer from "../components/Footer.astro";
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<Header>The Sleepy Boy</Header>
+	<Window title="all about me <3">
+		<div class="flex flex-col items-center p-2.5 w-[16%]" slot="left-column">
+			<img src="/gifs/dr-house-house.gif" alt="">
+			<img src="/gifs/dr-freak-is-calling.gif" alt="">
+			<img src="/gifs/lets-try-the-drug-together.gif" alt="">
+			<img src="/gifs/wilson-wednesday.gif" alt="">
+		</div>
+
+		<div class="pt-0 pb-4 px-4" slot="content">
+			<h1>about me</h1>
+			<p>
+				i run out of patience fairly easy. hello, im ezequiel. im 17 and im from buenos aires argentina.
+				growing up i've always taken an interest in computers, i even tried to start programing at 11
+				years old in 2019 (it was visual basic and i of course had no idea what i was doing but i was 
+				proud of it anyways). i want to study computer science at UBA (universidad de buenos aires) and
+				i already started with the entry course!! AND IM STILL IN HIGH SCHOOL YALL (u can see my progress
+				in <a href="/uni">uni</a>).
+			</p>
+			<h1>experience</h1>
+			<p>
+				as you might have realised im not a professional developer AT ALL. i've tried making some projects
+				like a discord bot which lets you play truco which is a very popular argentine card game and another
+				discord bot to implement pinterest on discord (ofc they rejected my api access request bc why not) and
+				more ofc. if i ever finish one of those projects i promise i'll post it on github but let's stick to
+				this webpage as my only finished public project for the time being
+			</p>
+			<h1>extra links!!</h1>
+			<p>
+				here u got some extra links
+			</p>
+		</div>
+
+		<div class="flex items-center justify-center w-full gap-2.5" slot="buttons">
+			<Button
+				href="https://github.com/thesleepyboy"
+				icon="/icons/github.svg"
+				text="github"
+			/>
+			<Button
+				href="https://open.spotify.com/user/matute2540?si=6e19fff75d3e4ee0"
+				icon="/icons/spotify.svg"
+				text="spotify"
+			/>
+			<Button
+				href="https://discord.com/users/757142622006411326"
+				icon="/icons/discord.svg"
+				text="discord"
+			/>
+		</div>
+	</Window>
+	<Footer>
+		<div class="flex gap-2.5">
+			<MinimizedWindow
+				title="GitHub (profile)"
+				goToPage="/github"
+			/>
+			<MinimizedWindow
+				title="Projects"
+				goToPage="/projects"
+			/>
+		</div>
+	</Footer>
 </Layout>
