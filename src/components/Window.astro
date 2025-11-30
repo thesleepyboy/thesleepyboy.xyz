@@ -4,12 +4,8 @@ const { title = "Untitled"} = Astro.props;
 
 <main class="flex flex-col p-0.5 w-full max-w-[100ch] text-large bg-white outline-2 outline-black">
     <div class="py-[0.3rem] text-white text-center font-bold bg-[rgb(0_0_170)]">{title}</div>
-    <div class="flex">
-        <slot name="left-column"/>
-        <div class="flex flex-col items-center w-full">
-            <slot name="content" />
-            <slot name="right-column" />
-            <slot name="buttons" />
-        </div>
+    <div class="flex flex-col p-2 items-center max-w-full">
+        <slot name="content" />
+        <slot name="buttons" />
     </div>
 </main>
