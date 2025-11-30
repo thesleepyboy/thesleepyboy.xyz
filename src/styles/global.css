@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "MS Sans Serif Original";
+    src: url("/fonts/MSW98UI-Regular.woff2") format("woff2");
+    font-style: normal;
+}
+
+@layer base {
+    h1 {
+        font-size: 2em;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-size: var(--text-xl);  
+    }
+}
+
+@theme {
+    --shadow-win95: 
+        inset 1px 1px white, 
+        inset -1px -1px #868a8e, 
+        1px 1px black;
+
+    --font-arial: Arial, sans-serif;
+    --font-mssoriginal: "MS Sans Serif Original";
+    --text-large: large;
+    
+}
