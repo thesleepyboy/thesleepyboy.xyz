@@ -19,7 +19,7 @@ const data = await response.json();
         title="GitHub (profile)"
 		buttons={buttons}
     >
-        <div class="flex items-center p-10" slot="content">
+        <div class="flex items-center p-10 gap-1.5" slot="content">
             <img class="max-h-40 max-w-40" src={data.avatar_url} alt="github profile picture">
             <div class="flex flex-col">
                 <b>{data.name}</b>
